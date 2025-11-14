@@ -3,9 +3,10 @@ import pandas as pd
 import json
 import plotly.express as px
 from datetime import datetime, timedelta
-from config import DB_CONNECTION_STRING 
 from classes.PostgreSQL import PostgresSQL 
 from pypika import Table, Query
+
+DB_CONNECTION_STRING = st.secrets["DB_CONNECTION_STRING"]
 
 st.set_page_config(layout="wide", page_title="Dashboard de Carteiras")
 
