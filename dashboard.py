@@ -38,10 +38,9 @@ def load_excel_data(diretorio):
         return None, None, None
 
 @st.cache_data(ttl=600)
-def load_json_data(diretorio, filepath="carteiras_otimizadas.json"):
+def load_json_data(diretorio=None, filepath="carteiras_otimizadas.json"):
     # Também ajustei o JSON para buscar na mesma pasta, caso ele fique lá!
-
-    #caminho_completo = os.path.join(diretorio, filepath) -> Rodando no desktop
+    #caminho_completo = os.path.join(diretorio, filepath) - Rodando no desktop
     caminho_completo = filepath
     try:
         with open(caminho_completo, 'r', encoding='utf-8') as f:
